@@ -1,0 +1,10 @@
+rag install packages for developing of install
+
+pip install langchain
+pip install langchain-community
+pip install pypdf
+pip install sentence-transformers
+pip install -U langchain-huggingface
+pip install chromadb
+pip install langchain-groq
+pip install langgraph
