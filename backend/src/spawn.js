@@ -26,6 +26,7 @@ export const Rag_prompt=(prompt)=>{
                     const parse=JSON.parse(data.toString())
 
               resolve(parse.output)  
+              console.log(parse.output)
        
 
 

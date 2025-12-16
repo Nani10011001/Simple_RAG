@@ -57,7 +57,8 @@ tool_dict={t.name: t for t in tools}
 # creating the state
 class Agent_state(TypedDict):
     messages:Annotated[Sequence[BaseMessage],addMessage]
-system_prompt = """
+
+system_prompt_data = """
 You are a climate information assistant.
 
 Answer ONLY in the following format:
@@ -72,7 +73,7 @@ Do not add anything else.
 
 def Agent_rag(state:Agent_state):
     message_data=list(state["messages"])
-    system_prompt=SystemMessage(content=system_prompt)
+    system_prompt=SystemMessage(content=system_prompt_data)
     fullMessage=[system_prompt]+message_data
     response=llm.invoke(fullMessage)
     return {"messages":[response]}

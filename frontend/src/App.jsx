@@ -14,7 +14,7 @@ const App = () => {
     setMessage((prev)=>[
       ...prev,userMessage
     ])
-    const {data}=await axios.post("http://localhost:3000/api/ragchat",{userinput:userMessage.text})
+    const {data}=await axios.post("http://localhost:3000/api/ragchat",{userdata:userMessage.text})
     console.log(data)
      console.log(data.Ai)
     const AiMessage={
